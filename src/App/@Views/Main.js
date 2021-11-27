@@ -1,18 +1,19 @@
 import React from 'react';
 
 import Wrapper, { Container, Section } from '../@Components/Modules/Containers';
+import Phone from '../@Components/Phone';
 
 export default class Main extends React.Component {
     render() {
         return (
             <>
-                <Section class="bg-dark">
-                    <Container class="flex justify-center items-center h-screen p-10">
-                        <Wrapper class="text-center m-auto w-100 text-light">
-                            <h1 class="text-3xl mb-3">Welcome</h1>
-                            <p class="text-1xl">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
+                <Section class="bg-light">
+                    <Container class="relative h-screen overflow-hidden">
+                        <Wrapper class="absolute top-0 w-full p-5">
+                            <h1 class="text-4xl text-center">TailwindCSS & HeadlessUI</h1>
+                        </Wrapper>
+                        <Wrapper class="flex flex-col items-center justify-center h-screen">
+                            <Phone/>
                         </Wrapper>
                     </Container>
                 </Section>
