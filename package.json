@@ -18,12 +18,16 @@
     "autoprefixer": "^9.8.8",
     "postcss": "^7.0.39"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^latest"
+  },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "craco build && mv build dist",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "craco build && mv build dist",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +46,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://DaveInchy.github.io/tailwind-app"
 }
